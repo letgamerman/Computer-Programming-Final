@@ -20,5 +20,6 @@ BLACKJACK LAYOUT
   A. Player Starts with 2000
   B. Player can waiger as much as they wish within those boundaries
   C. Make a goal of 25,000
+  D. Make players balance reset to 2,000 if it reaches 0 or Less
   
   
