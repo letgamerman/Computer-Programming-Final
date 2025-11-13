@@ -1,25 +1,66 @@
-BLACKJACK LAYOUT
+BLACKJACK PROJECT STATUS
 
-1. Find and learn to use the card library
-  A. Learn to deal cards
-  B. Learn how to use value
-  C.
-2. Create the ability to deal cards randomly to player and dealer.
-  A. Every player gets two 
-  B.Every Dealer gets 2 one face up.
-  C.
-3. Take the input of the card value and compare it to the dealers.
-  A. Is value > 21 = bust
-  B.if d_value < p_value = win
-  C.
-4.Create the Buttons 
-  A. Create a hit button
-  B. Create a Stand Button
-  C. Create a Doublle Button
-5. Create the Ability to Wager
-  A. Player Starts with 2000
-  B. Player can waiger as much as they wish within those boundaries
-  C. Make a goal of 25,000
-  D. Make players balance reset to 2,000 if it reaches 0 or Less
-  
+COMPLETED TASKS:
+✓ 1. Card system implementation
+  ✓ A. Learn to use card library (pygame_cards)
+  ✓ B. Deal cards randomly to player and dealer
+  ✓ C. Implement hand value calculation with Ace handling
+
+✓ 2. Game logic core
+  ✓ A. Deal two cards to player and dealer
+  ✓ B. Dealer shows one card face-up
+  ✓ C. Hand value comparison and bust detection
+
+✓ 3. Natural Blackjack
+  ✓ A. Detect player 21 on first two cards
+  ✓ B. 3:2 payout for natural blackjack
+  ✓ C. Push on both dealer and player blackjack
+
+✓ 4. Pygame Window and UI
+  ✓ A. Create window for game display
+  ✓ B. Display player and dealer hands
+  ✓ C. Display balance and bet information
+
+✓ 5. Game Controls
+  ✓ A. Hit button / H key
+  ✓ B. Stand button / S key
+  ✓ C. New hand button / N key
+
+✓ 6. Wagering System
+  ✓ A. Player starts with $2000 in Classic mode
+  ✓ B. Player can wager within balance limits
+  ✓ C. Goal of $25,000 in Classic mode
+  ✓ D. Out-of-money dialog when balance <= 0
+
+✓ 7. Game Modes
+  ✓ A. Practice mode (no wagers, unlimited plays)
+  ✓ B. Classic mode ($2000 start -> $25000 goal)
+  ✓ C. GameModeScreen UI (select mode at startup)
+  ✓ D. Mode selection integrated into main game loop
+
+IN-PROGRESS / PARTIAL:
+⚠ 8. Custom Mode
+  - Logic framework ready but needs UI for goal input
+
+ARCHITECTURE:
+- game.py: Core blackjack logic (331 lines)
+  * Card, Suit, Rank enums
+  * Deck class with shuffle/deal
+  * BlackjackGame class with state machine
+  * Hand calculation with smart Ace handling
+  * Mode parameter support
+
+- window.py: Pygame GUI (446 lines)
+  * DialogButton class for interactive buttons
+  * OutOfMoneyDialog for balance reset
+  * GameModeScreen for mode selection
+  * BlackjackWindow main game window
+  * Event handling, rendering, game loop
+
+NEXT STEPS:
+1. Test full game flow (mode select -> play -> out of money dialog)
+2. Implement Custom Mode input screen
+3. Add smooth transitions between modes
+4. Polish UI visuals
+5. Add sound effects (optional)
   
