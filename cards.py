@@ -7,10 +7,10 @@ from enum import Enum
 
 class Suit(Enum):
     """Card suits (Unicode symbols)."""
-    HEARTS = "♥"
-    DIAMONDS = "♦"
-    CLUBS = "♣"
-    SPADES = "♠"
+    HEARTS = ("♥", "H")
+    DIAMONDS = ("♦", "D")
+    CLUBS = ("♣", "C")
+    SPADES = ("♠", "S")
 
 
 class Rank(Enum):
@@ -56,6 +56,15 @@ class Card:
         if self.rank == Rank.ACE and allow_ace_as_one:
             return 1
         return self.rank.base_value
+    def image_key(self) -> str:
+        '''returns the image key so that it can pull the assigned png 
+        examples AH, AS ect.'''
+        # File names use rank + suit short (e.g., 'AH', '10D', 'QS')
+        rank = self.rank.display
+        # Suit value is stored as a tuple (symbol, short) => ('♥','H')
+        suit_short = self.suit.value[1]
+        return f"{rank}{suit_short}"
+
 
 
 class Deck:
