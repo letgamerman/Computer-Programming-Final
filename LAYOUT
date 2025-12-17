@@ -74,11 +74,4 @@ FILE STRUCTURE:
   * Event handling, rendering, game loop
   * ESC key returns to mode select
 
-NEXT STEPS:
-1. Test full game flow (mode select -> play -> out of money dialog)
-2. Implement Custom Mode input screen
-3. Add smooth transitions between modes
-4. Polish UI visuals
-5. Add sound effects (optional)
-6. Ace is either 1 or 11; need a button
   
